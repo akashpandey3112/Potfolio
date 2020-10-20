@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .canvas{
+				border: 1px solid #000;
+			}        
+            
+        </style>
+            
+    </head>
+    
+    <script>
+        window.onload=function()
+        {
+            var canvas = document.getElementById("myCanvas");
+            var context = canvas.getContext("2d");
+            context.beginPath();
+            context.arc(98, 50, 40, 0, 2 * Math.PI);
+            context.stroke();
+            
+            //arc(x, y, radius, startingangle, endingangle,  [true | false])
+            
+            context.moveTo(140,10);
+            context.lineTo(300,10);
+            context.stroke();
+
+            context.moveTo(140,100);
+            context.lineTo(300,100);
+            context.stroke();
+
+            context.moveTo(140,10);
+            context.lineTo(140,100);
+            context.stroke();
+
+            context.moveTo(300,10);
+            context.lineTo(300,100);
+            context.stroke();
+            
+            context.moveTo(175,100);
+            context.lineTo(175,150);
+            context.stroke();
+
+            context.moveTo(275,100);
+            context.lineTo(275,150);
+            context.stroke();
+
+        }
+    
+    </script>
+
+
+
+    <body> 
+                <canvas id="myCanvas" width="300" height="200"></canvas>
+                <!--<audio controls="controls">
+                    <source src="./SampleAudio_0.4mb.mp3" type="audio/mp3"><br><br>
+                </audio>
+
+                <video controls="controls">
+                    <source src="./SampleVideo_1280x720_1mb.mp4" type="video/mp4">
+                </video>-->
+           
+
+    </body>
+    </html>

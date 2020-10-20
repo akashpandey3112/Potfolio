@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+    <html>
+            <script src="./all.js"></script>
+              <script>
+window.alert("Welcome to Sign up page!!!");
+</script>
+        <head>
+                <title>Create Account</title>
+
+                <style type ="text/css" >
+                    body {
+
+                      background-image: url("./images/img.jpg");
+                      background-repeat: no-repeat;
+                      background-position: center;
+                      background-attachment: scroll;
+                      background-width: 100%;
+                      background-height: auto;
+                      background-color: lightgrey;
+                      width: 300px;
+                      border: 15px solid skyblue;
+                      padding: 50px;
+                      margin: 20px;
+                      outline-style: solid;
+                      margin: auto;
+  
+
+                    }
+
+
+ 
+   
+                    
+
+                    
+
+                    
+
+                 </style>
+        </head>
+        <header>
+
+        <body>
+            <div class="akash11"> 
+            <form action="./login.html" method="POST" onsubmit="return onvalidate()">
+                <strong>Enter Name</strong> <input required name="name" type="text"><br><br>
+                <strong>Password</strong> <input required name="password" type="password"><br><br>
+                <strong>Gender</strong> <br>
+                    <input type="radio" name="gender" value="male"> Male<br>
+                    <input type="radio" name="gender" value="female"> Female<br>
+                    <input type="radio" name="gender" value="other"> Other<br><br>
+                   
+                <strong>Age</strong><br> 0<input required type="range" min="0" max="100" value="0" class="slider" id="myRange" onchange="updateTextInput(this.value);">100 <br>
+                <strong>Value:</strong> <span id="demo"></span><br>
+                <!--<output name="x" for="myRange"></output>--><br>
+
+                <strong>Email</strong>    <input required name="email" type="email"><br><br>
+                
+                <strong>Contact</strong> <input required type="tel" pattern="[8-9]{1}[0-9]{9}"><br><br>
+
+                <strong>City</strong> <select required>
+                        <option value="Faridabad">Faridabad</option>
+                        <option value="Bhopal">Bhopal</option>
+                        <option value="Indore">Indore</option>
+                        <option value="Delhi">Delhi</option>
+                </select><br><br>
+                    
+                <strong>Date of Birth</strong> <input required type="date"><br><br>
+
+
+
+                <strong>Are you a hosteller?</strong><br>
+                    <select required size="2">
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select><br><br>
+                
+
+               <strong> Please describe yourself using as less words as possible:</strong><br>
+                    <textarea required rows="5" cols="40"></textarea><br><br>
+                
+                <strong>Provide a photo so that we can recognise you:</strong><br>
+                <input required type="file" name="myImage" accept="image/x-png,image/gif,image/jpeg" /><br><br>
+
+                <strong>Percentage in Class 12</strong><br>
+                <input required list="browsers" name="browser">
+                <datalist id="browsers">
+                    <option value="80 - 100">
+                    <option value="60 - 80">
+                    <option value="40 - 60">
+                </datalist>
+                <br><br>
+
+
+                <input required type="checkbox" id="cbox" name="declare"><em>I do hereby declare that above particulars of information and facts stated are true, correct and complete to the best of my knowledge and belief.</em><br><br>
+
+                <input type="submit" value="Submit">
+            </div>
+
+            </header>
+        </body>
+
+        <script>
+            var slider = document.getElementById("myRange");
+            output.innerHTML = slider.value; // Display the default slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+            output.innerHTML = this.value;
+            }
+        </script>
+
+            <script>
+                var slider = document.getElementById("myRange");
+                var output = document.getElementById("demo");
+                output.innerHTML = slider.value;
+
+                slider.oninput = function() {
+                    output.innerHTML = this.value;
+                }
+            </script>
+        
+        
+
+        <script>
+            function updateTextInput(val) {
+          document.getElementById('myRange').value=val; 
+        }    
+        </script>
+
+
+        <script>
+            function onvalidate(){
+                var a = document.getElementById('myRange').value;
+                if (a>=18)
+                    {
+                        document.getElementById('form').submit();
+                        return true;
+                    }
+                else{
+                        window.alert("Please enter a valid age between 18-100");
+                        //window.location="./login.html";
+                        return false;   
+                    }
+            }
+        
+        
+        </script>
